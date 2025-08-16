@@ -60,4 +60,6 @@ const input = readlineSync.question("What is your name : "); // question is a pr
 
 console.log("\nhello",input,"nice name"); // logging the input from user
 
+console.log("Done for this file")
+
 
