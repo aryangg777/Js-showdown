@@ -105,4 +105,6 @@ const arr = [10,"sci",true]
 console.log(typeof arr)
 console.log(arr)
 
+console.log("Done for this file")
+
 
