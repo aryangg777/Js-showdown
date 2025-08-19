@@ -62,7 +62,7 @@ console.log(typeof anon)
 
 // u cant call a anonymous function before declaration as it is treated like a variable and beahves like one
 
-let fexpression= function here(fname){ // a function expression , when a function with a name is assigned to variable , the variable becomes it name and called by variable name
+let fexpression= function here(fname){ // a function expression , when a function with a name is assigned to variable , the variable becomes it name and called by variable name 
     console.log(`i know ur name is ${fname}`)
 
 }
@@ -83,4 +83,50 @@ console.log(add(12,12)) // calling the function inside the console.log -> the fu
 const result = add(7,7) //calling the function , the function returns back a value where it is called here in a variable , then the return value from the function i assigned to variable . then to logg and use this o/p anywhere it will be assecced by this variable result
 console.log(result)
 
+//we never do console.log() inside a function , bad practice . 
+//functions should be pure functionsthat should accept parameters and return back some value n also dont change the data type of accepted variable
 
+function multiply(number){
+    return number**2 // executing function ends here
+    console.log("hey") // code beyond return in a function is not logged 
+}
+
+console.log(multiply(2)) // make sure not to write any thing beyond return
+
+//Arrow function : it is just function expression with diff syntax , easier
+//defining a function to a variable
+
+let trying = function(x,y){
+    return x+y;
+}
+console.log(trying(4,4))
+
+let arrow = (x,y) => {return x+y}  //remove word function from anonymous function for arrow function and seperate parameters and body of function by arrow
+
+console.log(arrow(3.5,3.5))
+
+const addn = (x,y) => x+y // whenever we have just one single value after arrow that we have to return , no need to write retrun and {}
+//single expression(value) written after arrow is automatically returned to function 
+console.log(addn(111,111))
+
+const greater = function(x,y){
+    if(x>y){
+        return x
+    }
+    else {return y}
+}
+
+console.log(greater(11,12))
+
+const bigger = (x,y) => x>y ? x : y //dont use {} in single line body code and also dont use when u are not writing return in {} 
+const ouput = bigger(12,23)
+console.log(ouput)
+
+const addition = (number)=>{ 
+    let count = 0
+for(let i = 1 ; i<=number; i++){
+    count= count +i
+}
+return count
+}
+console.log(addition(10))
