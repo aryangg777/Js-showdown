@@ -80,4 +80,7 @@ add(12,18) // wont be logged as the body of function doesnt have a console.log n
 
 console.log(add(12,12)) // calling the function inside the console.log -> the function returns a value back to where  function is called , here internally in console.log(24)
 
+const result = add(7,7) //calling the function , the function returns back a value where it is called here in a variable , then the return value from the function i assigned to variable . then to logg and use this o/p anywhere it will be assecced by this variable result
+console.log(result)
+
 
