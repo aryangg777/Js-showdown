@@ -130,3 +130,42 @@ for(let i = 1 ; i<=number; i++){
 return count
 }
 console.log(addition(10))
+  
+// defigning a function inside a function
+
+function testing(number){
+        console.log("testing a function inside a function")
+        let sum = 7
+        
+        function baby (){
+            console.log(`i am inside function testing ${number}`) 
+            console.log(sum)
+            //the inner function will have access to the variables and parameters of its outer function due to JavaScript’s lexical scoping rule.
+
+        }
+        baby()
+
+}
+// testing()
+try {
+    baby()
+} catch (error) {
+    console.log(error.message)
+    
+}  // will give an error as the function baby is not defined in global scope and only known and personal to function testing so to execute the function baby u need to call the function baby inside testing do that when we call function testing globally funcyion baby also gets called as function baby is a local scope 
+
+testing(7) //The inner function is available only within the scope of its outer function. function baby is not known globally but personal and locally known to parent
+
+//what ever u write within a function is local and acessible to the function and executed when only the function is called , cant globally access whatever in the function : variable,function etc.. all these cann only be accessed within function only
+
+// thus a same variable can be declared and used independently in diff variables as whatever is defined in a variable is personal to itself without acesss to anyone . a variable used or defined globally can be used inside a function independently or dependently
+
+
+const lname = 'gupta'
+function lnameprint(lname){
+    console.log("last name is",lname)
+}
+
+lnameprint("verma")
+
+console.log("Done for this file")
