@@ -69,5 +69,15 @@ let fexpression= function here(fname){ // a function expression , when a functio
 fexpression("hihi") // accesed by variable name
 // here("haahaa")  will give  an error as it is not globally defined but defined and assignes to the variable , will be accessed whne called by variable name , local function
 
-// Return type 
+// Return type -> when u want function to give  back somw value and u want to use it as per a wish after assigning th return value to a variable
+//a good practice , mostly followed
+
+function add(x,y){
+    return x+y
+
+}
+add(12,18) // wont be logged as the body of function doesnt have a console.log n have a instructionn to log the ouput, the function only returns a value -> give back a value
+
+console.log(add(12,12)) // calling the function inside the console.log -> the function returns a value back to where  function is called , here internally in console.log(24)
+
 
