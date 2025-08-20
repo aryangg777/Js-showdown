@@ -17,4 +17,4 @@ console.log(num.toFixed(3)) // since we wanr three numbers after poin and it has
 
 console.log(num.toPrecision(4)) //() u put a value in here stating how many digit u want from start to end in the number->and the ouput will be rounded off
 
-console.log(num.toExponential(2)) //
+console.log(num.toExponential(2)) // convert the number in exponential form and in that how many digits u need after decimal 
