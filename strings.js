@@ -184,7 +184,8 @@ console.log(typeof lateststring) // creating  something using new keyword create
 //.
 //lenght : 5 , u can access all this normally through lateststring[1],.length .. see it in chrome console
 
-
 //when string created in normal way using let str = 'heelo' , memory sllocstion in stack
 // when string creted usong new keyword memroy allocation in heap of data and varibale stored in stack stroting the refrence to this data in heap
+
+console.log("Done for this file")
 
