@@ -8,3 +8,7 @@ console.log(arr2)
 console.log(typeof arr2)
 
 console.log(arr.length)
+
+arr.pop() //removes last element of the array
+arr.pop()
+console.log(arr)
