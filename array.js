@@ -1,4 +1,8 @@
 //Array in js
+//array a non primitive data type used to store and manage collections of data efficiently
+//arrays can store multiple datatypes in it including nos,strings,arrays,objects ..
+//elements of array can be assecsed by thier ids(index) , arrays follow a 0 based indexing
+
 const arr = [2,3,4,5,6,8,8,9,10,22,33,11]
 console.log(arr)
 
@@ -114,3 +118,86 @@ let ab = new Array() // array ab created of variable legnth and will take size u
 
 console.log(a)
 console.log(ab)
+
+//split method -> convert string to array
+//to check if a string is palindrome or not
+const input = 'madam'
+//reverse string n check but we cant aplly reverse on string but can on array
+const trial = [1,2,3]
+console.log(trial.reverse()) //reverses elements in array
+
+const char = input.split("") //("") how u want the elements to seperated in array
+console.log(char.reverse()) //changes done in orignal array
+let reverse = char.join("")
+console.log(reverse==input)
+
+
+//spread operator (...arr)
+
+Array = [12,3,4,4]
+console.log(...Array) //not an array , unpacking elements of an array
+
+arr1 = [1,23,44,32]
+arr2 = [1,2,34,3]
+arr3 = [...arr1,...arr2,10,77] //when u have to add multiple items  in array
+//doesnt change orignal array
+console.log(arr3)
+
+//deconstucting array = extracting values from array and assigning them to a variable
+const num = [1,23,34,4]
+const [aa,b,c] = num
+console.log(aa)
+
+const [x,y,z,courses] = [5,6,7,['html','css','js']] //const [, , ,courses] = [5,6,7,['html','css','js']] not assigning variables to elements not needed
+console.log(courses)
+
+const aaa =[['html'],2,3,45,5]
+const [course , f] = aaa
+const [bb,cc , ...rest] = aaa //cant add more variables after rest , returns left elements as an seperate array
+console.log(course)
+console.log(rest) // returns left elements as an seperate array
+
+//swapping nos
+let nos1 = 5;
+let nos2 = 1;
+
+// Proper swap
+[nos1, nos2] = [nos2, nos1];
+
+console.log(nos1);   // Output: 1
+console.log(nos2);  // Output: 5
+
+//sort method
+const fruits = ['apple','mango','banana']
+fruits.sort() //changes in orginal array
+console.log(fruits) // compared character by charcter after converting into thier ascii code . arranges iin asscending orger
+
+
+const Numbers = [1,4,2,7,8,61,11]
+Numbers.sort()
+console.log(Numbers) //numbers converted to string and compared their unicode transformation
+
+function asc(a,b){//call back function
+    return a-b //sort in ascending order , for descending order b-a
+    //take no pair wise
+  //first 1,4 if diff -ve then no change in order
+  //then 4,2 if diff +ve then change in order
+  //keep going on .
+}
+Numbers.sort(asc)
+console.log(Numbers)
+
+//to avoid shallow copy use spread operator
+let ARRAY = [1,2,3,4] 
+let ARR3 = [...ARRAY] //points to a diff element in memor with same element , deep copy
+console.log(ARR3)
+ARR3.push(777) //chnages in ARR3 not ARRAY as they are diff now as deep copy is created using spread operator
+console.log(ARR3)
+let Arr4 =[] //empty array with no elements can add later
+
+for (let char of ARRAY)
+{
+    Arr4.push(char)
+}
+console.log(Arr4)
+
