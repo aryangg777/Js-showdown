@@ -88,4 +88,4 @@ console.log(Math.floor(Math.random()*6+1))
 
 //not truly random as its guessable and can finded out after getting to know its algoritm and system clock , because a trully random is which  isnt predicible and cant be find out ever , so thats a more secure and system is needed to genrate random nos as otp -> so companies selling this otp services made a system with thier algos more secure and private impossible to find out for hacker and making it close to truly random
 
-console.log("Done for this file")
+console.log("Done for this file ")
