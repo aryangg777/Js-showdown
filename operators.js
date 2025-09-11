@@ -135,3 +135,4 @@ console.log(firstname??"hidden")
 console.log(a ?? 1) // 0 holds a truthy value(imp value)for u use ?? for truthy vlue as using || will consider it as falsy value
 
 console.log("Done for this file")
+
